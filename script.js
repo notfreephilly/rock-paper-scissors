@@ -1,7 +1,5 @@
-const playerSelection = "rock";
+const playerSelection = prompt("Rock, paper or scissor?");
 const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
-// Function to randomly generate a choice selected by the computer
 
 
 function getComputerChoice() {
@@ -25,29 +23,26 @@ function playRound(playerSelection, computerSelection) {
     let player = playerSelection;
     let comp = computerSelection;
 
-    const playerStr = player.toLowerCase();
-    const compStr = comp.toLowerCase();
-
-    if (playerStr === "rock")
-        if (compStr === "rock") {
+    if (player.toLowerCase() === "rock")
+        if (comp.toLowerCase() === "rock") {
             return "It is a tie!!"
-        } else if (compStr === "paper") {
+        } else if (compStr.toLowerCase() === "paper") {
             return "You lose, paper beats rock!"
         } else {
             return "You won!"
         }
-    else if (playerStr === "scissor")
-        if (compStr === "scissor") {
+    else if (player.toLowerCase() === "scissor")
+        if (comp.toLowerCase() === "scissor") {
             return "You tied!"
-        } else if (compStr === "rock") {
+        } else if (comp.toLowerCase() === "rock") {
             return "You lose, rock beats scissor!"
         } else {
             return "You won!"
         }
     else {
-        if (compStr === "paper") {
+        if (comp.toLowerCase() === "paper") {
             return "You lost! Paper beats rock"
-        } else if (compStr === "scissor") {
+        } else if (comp.toLowerCase() === "scissor") {
             return "You win! Rock beats scissor"
         } else {
             return "Tie game!"
@@ -55,3 +50,9 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+playRound();
+playRound();
+playRound();
+playRound();
+playRound();
+playRound();
